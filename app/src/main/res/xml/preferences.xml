@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="التحديث المباشر" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="refresh_interval"
+            app:title="سرعة تحديث الأسعار"
+            app:defaultValue="10"
+            app:entries="@array/refresh_labels"
+            app:entryValues="@array/refresh_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="flash_prices"
+            app:title="وميض عند تغير السعر"
+            app:summary="أخضر عند الصعود وأحمر عند الهبوط"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="keep_screen_on"
+            app:title="إبقاء الشاشة مضاءة"
+            app:summary="مفيد لمتابعة السعر في المحل أو على شاشة عرض"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="الليرة السورية" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="syp_source"
+            app:title="مصدر سعر صرف الليرة"
+            app:defaultValue="api"
+            app:entries="@array/syp_source_labels"
+            app:entryValues="@array/syp_source_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="syp_manual_rate"
+            app:title="سعر الدولار اليدوي (بالليرة الجديدة)"
+            app:dialogTitle="كم ليرة جديدة يساوي الدولار؟"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="syp_denomination"
+            app:title="عرض الليرة بالفئة"
+            app:defaultValue="new"
+            app:entries="@array/syp_den_labels"
+            app:entryValues="@array/syp_den_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="العرض والأسعار" app:iconSpaceReserved="false">
+        <MultiSelectListPreference
+            app:key="karats"
+            app:title="الأعيرة المعروضة"
+            app:summary="اختر الأعيرة التي تظهر في جدول الغرام"
+            app:defaultValue="@array/karat_default"
+            app:entries="@array/karat_labels"
+            app:entryValues="@array/karat_values"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="spread_percent"
+            app:title="هامش البيع المحلي (%)"
+            app:dialogTitle="نسبة تضاف على سعر الغرام (0 = السعر العالمي الصافي)"
+            app:defaultValue="0"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="decimals"
+            app:title="الكسور العشرية"
+            app:defaultValue="2"
+            app:entries="@array/decimals_labels"
+            app:entryValues="@array/decimals_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <ListPreference
+            app:key="digits"
+            app:title="شكل الأرقام"
+            app:defaultValue="latin"
+            app:entries="@array/digits_labels"
+            app:entryValues="@array/digits_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="show_coins"
+            app:title="عرض الليرات الذهبية والسبائك"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+        <SwitchPreferenceCompat
+            app:key="show_silver"
+            app:title="عرض أسعار الفضة"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="الحاسبة" app:iconSpaceReserved="false">
+        <EditTextPreference
+            app:key="vat_percent"
+            app:title="نسبة ضريبة القيمة المضافة (%)"
+            app:dialogTitle="الضريبة على المصنعية والمشغولات (السعودية 15%)"
+            app:defaultValue="15"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="تنبيهات السعر" app:iconSpaceReserved="false">
+        <SwitchPreferenceCompat
+            app:key="alerts_enabled"
+            app:title="تفعيل التنبيهات"
+            app:summary="فحص السعر كل 15 دقيقة في الخلفية وإرسال إشعار"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="alert_above"
+            app:dependency="alerts_enabled"
+            app:title="نبّهني إذا ارتفعت الأونصة فوق ($)"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+        <EditTextPreference
+            app:key="alert_below"
+            app:dependency="alerts_enabled"
+            app:title="نبّهني إذا نزلت الأونصة تحت ($)"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="المظهر" app:iconSpaceReserved="false">
+        <ListPreference
+            app:key="theme"
+            app:title="سمة التطبيق"
+            app:defaultValue="dark"
+            app:entries="@array/theme_labels"
+            app:entryValues="@array/theme_values"
+            app:useSimpleSummaryProvider="true"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="حول" app:iconSpaceReserved="false">
+        <Preference
+            app:key="sources"
+            app:title="مصادر البيانات"
+            app:summary="الذهب والفضة الفوري: gold-api.com (احتياطي: xaus.com ثم COMEX)\nالمخطط: عقود COMEX عبر Yahoo Finance معايرة على السعر الفوري\nالصرف: ExchangeRate-API — الريال مربوط رسمياً 3.75"
+            app:iconSpaceReserved="false" />
+        <Preference
+            app:key="reset"
+            app:title="إعادة الإعدادات الافتراضية"
+            app:iconSpaceReserved="false" />
+        <Preference
+            app:key="version"
+            app:title="ذهب لايف"
+            app:summary="الإصدار 1.0"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

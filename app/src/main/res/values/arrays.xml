@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="refresh_labels">
+        <item>كل 5 ثوانٍ (لحظي)</item>
+        <item>كل 10 ثوانٍ</item>
+        <item>كل 30 ثانية</item>
+        <item>كل دقيقة</item>
+        <item>كل 5 دقائق (توفير البيانات)</item>
+    </string-array>
+    <string-array name="refresh_values">
+        <item>5</item><item>10</item><item>30</item><item>60</item><item>300</item>
+    </string-array>
+
+    <string-array name="theme_labels">
+        <item>داكن ذهبي</item><item>فاتح</item><item>حسب النظام</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>dark</item><item>light</item><item>system</item>
+    </string-array>
+
+    <string-array name="syp_source_labels">
+        <item>تلقائي من مصدر أسعار الصرف</item>
+        <item>سعر يدوي (سعر السوق / الصرافة)</item>
+    </string-array>
+    <string-array name="syp_source_values">
+        <item>api</item><item>manual</item>
+    </string-array>
+
+    <string-array name="syp_den_labels">
+        <item>الليرة الجديدة (بعد حذف صفرين)</item>
+        <item>الليرة القديمة</item>
+    </string-array>
+    <string-array name="syp_den_values">
+        <item>new</item><item>old</item>
+    </string-array>
+
+    <string-array name="karat_labels">
+        <item>عيار 24</item><item>عيار 22</item><item>عيار 21</item><item>عيار 18</item><item>عيار 14</item>
+    </string-array>
+    <string-array name="karat_values">
+        <item>24</item><item>22</item><item>21</item><item>18</item><item>14</item>
+    </string-array>
+
+    <string-array name="decimals_labels">
+        <item>بدون كسور</item><item>منزلتان عشريتان</item>
+    </string-array>
+    <string-array name="decimals_values">
+        <item>0</item><item>2</item>
+    </string-array>
+
+    <string-array name="digits_labels">
+        <item>أرقام إنجليزية 123</item><item>أرقام عربية ١٢٣</item>
+    </string-array>
+    <string-array name="digits_values">
+        <item>latin</item><item>arabic</item>
+    </string-array>
+    <string-array name="karat_default">
+        <item>24</item><item>22</item><item>21</item><item>18</item>
+    </string-array>
+</resources>

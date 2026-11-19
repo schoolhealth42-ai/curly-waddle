@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold">#C9971C</color>
+    <color name="gold_light">#F2C94C</color>
+    <color name="gold_dark">#8A6410</color>
+    <color name="bg">#F6F3EC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="card_alt">#FBF6E9</color>
+    <color name="text_primary">#1E1B16</color>
+    <color name="text_secondary">#6E675B</color>
+    <color name="divider">#E3DCCB</color>
+    <color name="up">#16A34A</color>
+    <color name="down">#DC2626</color>
+    <color name="on_gold">#1A1405</color>
+</resources>
